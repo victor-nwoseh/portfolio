@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+      <p className="mt-6 text-emerald-600">Tailwind is configured correctly.</p>
         <Image
           className={styles.logo}
           src="/next.svg"
