@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
@@ -11,15 +11,16 @@ export default function Home() {
       <main className={styles.main}>
       <Section id="hero">
       <Container>
-      <motion.div
-        initial={{ opacity: 0, y: 24, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-        className="rounded-md bg-surface p-4 border border-border"
-      >
-        <p className="text-secondary">This card uses surface and border tokens.</p>
-        <a className="text-accent hover:text-accent-hover underline" href="#">Accent link hover test</a>
-      </motion.div>
+        <Hero
+          name="Victor Nwoseh"
+          role="Software Engineer"
+          valueProp="I build accessible, performant web experiences with React, TypeScript, and Next.js."
+          ctaHref="mailto:victor.nwoseh05@gmail.com?subject=Hire%20me%20for%20solutions"
+          socials={[
+            { label: "GitHub", href: "https://github.com/victor-nwoseh" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/victor-nwoseh/" },
+          ]}
+        />
         <Image
           className={styles.logo}
           src="/next.svg"
