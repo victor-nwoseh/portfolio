@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Container from "@/components/layout/Container";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+      <Container>
       <div className="rounded-md bg-surface p-4 border border-border">
         <p className="text-secondary">This card uses surface and border tokens.</p>
         <a className="text-accent hover:text-accent-hover underline" href="#">Accent link hover test</a>
@@ -49,6 +51,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+      </Container>
       </main>
       <footer className={styles.footer}>
         <a
