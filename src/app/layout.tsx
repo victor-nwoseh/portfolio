@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} font-sans`}>
-      <body>
+      <body className="bg-background text-primary">
         {children}
       </body>
     </html>

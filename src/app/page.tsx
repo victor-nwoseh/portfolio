@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-      <p className="mt-6 text-emerald-600">Tailwind is configured correctly.</p>
+      <div className="rounded-md bg-surface p-4 border border-border">
+        <p className="text-secondary">This card uses surface and border tokens.</p>
+        <a className="text-accent hover:text-accent-hover underline" href="#">Accent link hover test</a>
+      </div>
         <Image
           className={styles.logo}
           src="/next.svg"
