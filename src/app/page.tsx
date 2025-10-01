@@ -1,11 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Container from "@/components/layout/Container";
+import Section from "@/components/layout/Section";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+      <Section id="hero">
       <Container>
       <div className="rounded-md bg-surface p-4 border border-border">
         <p className="text-secondary">This card uses surface and border tokens.</p>
@@ -52,6 +54,7 @@ export default function Home() {
           </a>
         </div>
       </Container>
+      </Section>
       </main>
       <footer className={styles.footer}>
         <a
