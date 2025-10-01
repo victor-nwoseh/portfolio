@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { motion } from "framer-motion";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 
@@ -9,10 +11,15 @@ export default function Home() {
       <main className={styles.main}>
       <Section id="hero">
       <Container>
-      <div className="rounded-md bg-surface p-4 border border-border">
+      <motion.div
+        initial={{ opacity: 0, y: 24, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+        className="rounded-md bg-surface p-4 border border-border"
+      >
         <p className="text-secondary">This card uses surface and border tokens.</p>
         <a className="text-accent hover:text-accent-hover underline" href="#">Accent link hover test</a>
-      </div>
+      </motion.div>
         <Image
           className={styles.logo}
           src="/next.svg"
