@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import Button from "@/components/ui/Button";
 import { reveal } from "@/lib/motion/presets";
-import Card from "@/components/ui/Card";
 
 interface SocialLink {
   label: string;
@@ -21,7 +20,7 @@ interface HeroProps {
 export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroProps) {
   return (
     <motion.div {...reveal}>
-      <Card className="p-6 md:p-8">
+      <div className="p-0 md:p-0">
       <h1 className="text-display font-bold text-primary">{name}</h1>
       <p className="mt-2 text-h3 text-secondary">{role}</p>
       <p className="mt-4 text-bodyLg text-primary">{valueProp}</p>
@@ -36,7 +35,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
           ))}
         </div>
       </div>
-      </Card>
+      </div>
     </motion.div>
   );
 }
