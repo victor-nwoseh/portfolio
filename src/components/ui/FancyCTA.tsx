@@ -13,6 +13,7 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
   ({ href, children, className }, ref) => {
     const prefersReduced = useReducedMotion();
     const [confetti, setConfetti] = useState(false);
+    const [hovered, setHovered] = useState(false);
 
     const Base = motion(href ? "a" : "button");
 
@@ -42,6 +43,10 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
                 },
               }
         }
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        onFocus={() => setHovered(true)}
+        onBlur={() => setHovered(false)}
         onClick={() => setConfetti(true)}
         // Gradient background
         style={{
@@ -96,7 +101,7 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
               whileHover={{ y: -2, rotate: 10 }}
               transition={{ type: "spring", stiffness: 300, damping: 16 }}
             >
-              👀
+              {hovered ? "😉" : "👀"}
             </motion.span>
           )}
         </span>
