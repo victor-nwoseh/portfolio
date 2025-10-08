@@ -3,18 +3,30 @@
 @tailwind utilities;
 
 :root{
-  --color-background:#ffffff;
-  --color-surface:#f8fafc;
-  --color-text-primary:#0f172a;
-  --color-text-secondary:#334155;
-  --color-accent:#14b8a6;
-  --color-accent-hover:#0d9488;
-  --color-border:#e2e8f0;
+  /* Dark palette aligned with reference aesthetic */
+  --color-background:#0a192f;  /* base navy */
+  --color-surface:#0f172a;
+  --color-text-primary:#e2e8f0;
+  --color-text-secondary:#94a3b8;
+  --color-accent:#2dd4bf;      /* teal */
+  --color-accent-hover:#22c3ac;
+  --color-border:#1f2a3a;
   --color-muted:#94a3b8;
   --color-focus:#22d3ee;
   --color-success:#16a34a;
   --color-warning:#f59e0b;
   --color-error:#ef4444;
+}
+
+/* Atmospheric background: subtle radial washes + gentle vertical tint */
+body{
+  background-color: var(--color-background);
+  background-image:
+    radial-gradient(600px 300px at 20% 0%, rgba(45,212,191,0.08), rgba(10,25,47,0) 60%),
+    radial-gradient(800px 400px at 85% 10%, rgba(56,189,248,0.06), rgba(10,25,47,0) 60%),
+    linear-gradient(180deg, rgba(17,34,64,0.6), rgba(10,25,47,0.6));
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 html { scroll-behavior: smooth; }

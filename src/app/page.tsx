@@ -3,6 +3,7 @@ import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Hero from "@/components/sections/Hero";
+import SectionTitle from "@/components/layout/SectionTitle";
 
 export default function Home() {
   return (
@@ -23,32 +24,32 @@ export default function Home() {
       </Container>
       </Section>
       <Section id="about">
+      <SectionTitle title="About" />
       <Container>
-        <h2 className="text-2xl font-bold text-primary">About</h2>
         <p className="text-secondary mt-2">Coming soon.</p>
       </Container>
       </Section>
       <Section id="what-i-do">
+      <SectionTitle title="What I do" />
       <Container>
-        <h2 className="text-2xl font-bold text-primary">What I do</h2>
         <p className="text-secondary mt-2">Coming soon.</p>
       </Container>
       </Section>
       <Section id="skills">
+      <SectionTitle title="Skills" />
       <Container>
-        <h2 className="text-2xl font-bold text-primary">Skills</h2>
         <p className="text-secondary mt-2">Coming soon.</p>
       </Container>
       </Section>
       <Section id="projects">
+      <SectionTitle title="Projects" />
       <Container>
-        <h2 className="text-2xl font-bold text-primary">Projects</h2>
         <p className="text-secondary mt-2">Coming soon.</p>
       </Container>
       </Section>
       <Section id="contact">
+      <SectionTitle title="Contact" />
       <Container>
-        <h2 className="text-2xl font-bold text-primary">Contact</h2>
         <p className="text-secondary mt-2">Coming soon.</p>
       </Container>
       </Section>
