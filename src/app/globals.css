@@ -37,3 +37,8 @@ html { scroll-behavior: smooth; }
   background: color-mix(in srgb, var(--color-accent) 16%, transparent);
   color: var(--color-text-primary);
 }
+
+/* Hide cursor glow on coarse pointers (touch devices) */
+@media (pointer: coarse) {
+  .coarse-hide { display: none !important; }
+}
