@@ -22,9 +22,9 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
   return (
     <motion.div {...reveal}>
       <Card className="p-6 md:p-8">
-      <h1 className="text-4xl md:text-5xl font-bold text-primary">{name}</h1>
-      <p className="mt-2 text-lg font-medium text-secondary">{role}</p>
-      <p className="mt-4 text-base text-primary">{valueProp}</p>
+      <h1 className="text-display font-bold text-primary">{name}</h1>
+      <p className="mt-2 text-h3 text-secondary">{role}</p>
+      <p className="mt-4 text-bodyLg text-primary">{valueProp}</p>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <Button variant="accent" href={ctaHref}>Hire me</Button>
