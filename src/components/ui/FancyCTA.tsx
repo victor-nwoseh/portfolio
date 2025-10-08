@@ -99,6 +99,33 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
               className="inline-block"
               initial={{ y: 0, rotate: 0 }}
               whileHover={{ y: -2, rotate: 10 }}
+              animate={
+                hovered
+                  ? {
+                      rotate: [0, -12, 0],
+                      scaleY: [1, 0.85, 1],
+                      scaleX: [1, 1.06, 1],
+                      transition: {
+                        duration: 1.1,
+                        repeat: Infinity,
+                        repeatDelay: 1.2,
+                        ease: [0.16, 1, 0.3, 1],
+                      },
+                    }
+                  : {
+                      rotate: 0,
+                      scaleX: 1,
+                      // periodic blink
+                      scaleY: [1, 0.45, 1],
+                      transition: {
+                        duration: 0.14,
+                        repeat: Infinity,
+                        repeatDelay: 1.2,
+                        ease: [0.26, 0.04, 0.35, 1],
+                      },
+                    }
+              }
+              style={{ transformOrigin: "50% 60%" }}
               transition={{ type: "spring", stiffness: 300, damping: 16 }}
             >
               {hovered ? "😉" : "👀"}
