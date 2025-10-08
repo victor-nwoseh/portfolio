@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import Button from "@/components/ui/Button";
+import FancyCTA from "@/components/ui/FancyCTA";
 import { reveal } from "@/lib/motion/presets";
 
 interface SocialLink {
@@ -26,7 +27,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
       <p className="mt-4 text-bodyLg text-primary">{valueProp}</p>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <Button variant="accent" href={ctaHref}>Hire me</Button>
+        <FancyCTA href={ctaHref}>Hire me</FancyCTA>
         <div className="flex items-center gap-4">
           {socials.map((s) => (
             <a key={s.label} href={s.href} className="text-accent hover:text-accent-hover underline">
