@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import Button from "@/components/ui/Button";
 
 interface SocialLink {
   label: string;
@@ -28,12 +29,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
       <p className="mt-4 text-base text-primary">{valueProp}</p>
 
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <a
-          href={ctaHref}
-          className="inline-flex items-center rounded-md bg-accent hover:bg-accent-hover text-white px-4 py-2 transition-colors"
-        >
-          Hire me
-        </a>
+        <Button variant="accent" href={ctaHref}>Hire me</Button>
         <div className="flex items-center gap-4">
           {socials.map((s) => (
             <a key={s.label} href={s.href} className="text-accent hover:text-accent-hover underline">
