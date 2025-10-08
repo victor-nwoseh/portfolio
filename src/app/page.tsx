@@ -22,6 +22,36 @@ export default function Home() {
         />
       </Container>
       </Section>
+      <Section id="about">
+      <Container>
+        <h2 className="text-2xl font-bold text-primary">About</h2>
+        <p className="text-secondary mt-2">Coming soon.</p>
+      </Container>
+      </Section>
+      <Section id="what-i-do">
+      <Container>
+        <h2 className="text-2xl font-bold text-primary">What I do</h2>
+        <p className="text-secondary mt-2">Coming soon.</p>
+      </Container>
+      </Section>
+      <Section id="skills">
+      <Container>
+        <h2 className="text-2xl font-bold text-primary">Skills</h2>
+        <p className="text-secondary mt-2">Coming soon.</p>
+      </Container>
+      </Section>
+      <Section id="projects">
+      <Container>
+        <h2 className="text-2xl font-bold text-primary">Projects</h2>
+        <p className="text-secondary mt-2">Coming soon.</p>
+      </Container>
+      </Section>
+      <Section id="contact">
+      <Container>
+        <h2 className="text-2xl font-bold text-primary">Contact</h2>
+        <p className="text-secondary mt-2">Coming soon.</p>
+      </Container>
+      </Section>
       </main>
       <footer></footer>
     </div>
