@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import Button from "@/components/ui/Button";
+import { reveal } from "@/lib/motion/presets";
+import Card from "@/components/ui/Card";
 
 interface SocialLink {
   label: string;
@@ -18,12 +20,8 @@ interface HeroProps {
 
 export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 24, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className="rounded-md bg-surface p-6 md:p-8 border border-border"
-    >
+    <motion.div {...reveal}>
+      <Card className="p-6 md:p-8">
       <h1 className="text-4xl md:text-5xl font-bold text-primary">{name}</h1>
       <p className="mt-2 text-lg font-medium text-secondary">{role}</p>
       <p className="mt-4 text-base text-primary">{valueProp}</p>
@@ -38,6 +36,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
           ))}
         </div>
       </div>
+      </Card>
     </motion.div>
   );
 }
