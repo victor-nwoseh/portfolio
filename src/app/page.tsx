@@ -4,6 +4,7 @@ import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Hero from "@/components/sections/Hero";
 import SectionTitle from "@/components/layout/SectionTitle";
+import About from "@/components/sections/About";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       <Section id="about">
       <SectionTitle title="About" />
       <Container>
-        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+        <About />
       </Container>
       </Section>
       <Section id="what-i-do">
