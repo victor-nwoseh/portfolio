@@ -14,8 +14,8 @@ export default function Home() {
         <Hero
           name="Victor Nwoseh"
           role="Software Engineer"
-          valueProp="I build accessible, performant web experiences with React, TypeScript, and Next.js."
-          ctaHref="mailto:victor.nwoseh05@gmail.com?subject=Hire%20me%20for%20solutions"
+          valueProp=""
+          ctaHref="mailto:victor.nwoseh05@gmail.com?subject=So%E2%80%A6%20when%20can%20you%20start%3F"
           socials={[
             { label: "GitHub", href: "https://github.com/victor-nwoseh" },
             { label: "LinkedIn", href: "https://www.linkedin.com/in/victor-nwoseh/" },
@@ -26,31 +26,31 @@ export default function Home() {
       <Section id="about">
       <SectionTitle title="About" />
       <Container>
-        <p className="text-secondary mt-2">Coming soon.</p>
+        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="what-i-do">
       <SectionTitle title="What I do" />
       <Container>
-        <p className="text-secondary mt-2">Coming soon.</p>
+        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="skills">
       <SectionTitle title="Skills" />
       <Container>
-        <p className="text-secondary mt-2">Coming soon.</p>
+        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="projects">
       <SectionTitle title="Projects" />
       <Container>
-        <p className="text-secondary mt-2">Coming soon.</p>
+        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="contact">
       <SectionTitle title="Contact" />
       <Container>
-        <p className="text-secondary mt-2">Coming soon.</p>
+        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       </main>

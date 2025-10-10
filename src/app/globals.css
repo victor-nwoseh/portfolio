@@ -40,6 +40,15 @@ html { scroll-behavior: smooth; }
   color: var(--color-text-primary);
 }
 
+@keyframes blinkCursor {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blinkCursor 1.1s steps(1, end) infinite;
+}
+
 /* Hide cursor glow on coarse pointers (touch devices) */
 @media (pointer: coarse) {
   .coarse-hide { display: none !important; }

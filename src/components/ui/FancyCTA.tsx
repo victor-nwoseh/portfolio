@@ -1,5 +1,5 @@
 "use client";
-import { forwardRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import ConfettiBurst from "@/components/ui/ConfettiBurst";
 
@@ -7,13 +7,34 @@ type Props = {
   href?: string;
   children: React.ReactNode;
   className?: string;
+  bounce?: boolean;
+  showEmoji?: boolean;
 };
 
 const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
-  ({ href, children, className }, ref) => {
+  ({ href, children, className, bounce = true, showEmoji = true }, ref) => {
     const prefersReduced = useReducedMotion();
     const [confetti, setConfetti] = useState(false);
     const [hovered, setHovered] = useState(false);
+    const [isCoarsePointer, setIsCoarsePointer] = useState(false);
+    const [bounceOn, setBounceOn] = useState(false);
+
+    useEffect(() => {
+      if (typeof window === "undefined" || !window.matchMedia) return;
+      const media = window.matchMedia("(pointer: coarse)");
+      const update = () => setIsCoarsePointer(media.matches);
+      update();
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }, []);
+
+    useEffect(() => {
+      if (!bounce || prefersReduced) {
+        setBounceOn(false);
+        return;
+      }
+      setBounceOn(true);
+    }, [bounce, prefersReduced]);
 
     const Base = motion(href ? "a" : "button");
 
@@ -22,14 +43,14 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         ref={ref as any}
         href={href as any}
         type={!href ? "button" : undefined}
-        className={`relative inline-flex select-none items-center justify-center rounded-full px-6 h-11 text-white focus:outline-none focus:ring-2 focus:ring-focus ${
+        className={`relative inline-flex select-none items-center justify-center rounded-full px-5 h-10 text-sm sm:px-6 sm:h-11 sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-focus cursor-pointer ${
           className ?? ""
         }`}
         // Hover/press animations + idle bounce
-        whileHover={prefersReduced ? undefined : { scale: 1.06, y: -2 }}
+        whileHover={prefersReduced || isCoarsePointer ? undefined : { scale: 1.04, y: -2 }}
         whileTap={prefersReduced ? undefined : { scale: 0.97, y: 0 }}
         animate={
-          prefersReduced
+          prefersReduced || !bounceOn
             ? undefined
             : {
                 y: [0, -10, 0, -6, 0],
@@ -43,10 +64,15 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
                 },
               }
         }
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onFocus={() => setHovered(true)}
+        onPointerEnter={(event: React.PointerEvent) => {
+          if (event.pointerType === "mouse") setHovered(true);
+        }}
+        onPointerLeave={(event: React.PointerEvent) => {
+          if (event.pointerType === "mouse") setHovered(false);
+        }}
+        onFocus={() => setHovered(!isCoarsePointer)}
         onBlur={() => setHovered(false)}
+        onPointerDown={() => setConfetti(true)}
         onClick={() => setConfetti(true)}
         // Gradient background
         style={{
@@ -56,7 +82,7 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         }}
       >
         {/* Inner glow */}
-        {!prefersReduced && (
+        {!prefersReduced && !isCoarsePointer && (
           <motion.span
             aria-hidden
             className="pointer-events-none absolute -inset-px rounded-full blur-md"
@@ -70,7 +96,7 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         )}
 
         {/* Shimmer on hover/focus */}
-        {!prefersReduced && (
+        {!prefersReduced && !isCoarsePointer && (
           <motion.span
             aria-hidden
             className="pointer-events-none absolute inset-0 overflow-hidden rounded-full"
@@ -93,7 +119,7 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
 
         <span className="relative z-10 font-medium flex items-center gap-2">
           {children}
-          {!prefersReduced && (
+          {!prefersReduced && showEmoji && (
             <motion.span
               aria-hidden
               className="inline-block"

@@ -36,7 +36,7 @@ export default function ConfettiBurst({ durationMs = 2000, onDone }: ConfettiBur
     const colors = ["#2dd4bf", "#22d3ee", "#ffffff", "#a78bfa", "#f59e0b"];
 
     type P = { x: number; y: number; vx: number; vy: number; size: number; rot: number; spin: number; color: string; life: number; };
-    const particles: P[] = Array.from({ length: 140 }).map(() => ({
+    const particles: P[] = Array.from({ length: window.innerWidth < 640 ? 80 : 140 }).map(() => ({
       x: Math.random() * window.innerWidth,
       y: -20 + Math.random() * -100,
       vx: (Math.random() - 0.5) * 4,
