@@ -14,10 +14,10 @@ type Props = {
 const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
   ({ href, children, className, bounce = true, showEmoji = true }, ref) => {
     const prefersReduced = useReducedMotion();
-    const [confetti, setConfetti] = useState(false);
     const [hovered, setHovered] = useState(false);
     const [isCoarsePointer, setIsCoarsePointer] = useState(false);
     const [bounceOn, setBounceOn] = useState(false);
+    const [confetti, setConfetti] = useState(false);
 
     useEffect(() => {
       if (typeof window === "undefined" || !window.matchMedia) return;
@@ -72,8 +72,29 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
         }}
         onFocus={() => setHovered(!isCoarsePointer)}
         onBlur={() => setHovered(false)}
-        onPointerDown={() => setConfetti(true)}
-        onClick={() => setConfetti(true)}
+        onClick={(event) => {
+          const target = event.currentTarget as HTMLAnchorElement;
+          const hrefValue = target.getAttribute("href") ?? href ?? "";
+
+          if (!prefersReduced && !isCoarsePointer) {
+            target.blur();
+          }
+
+          // Let the mail client open first.
+          requestAnimationFrame(() => {
+            if (hrefValue.startsWith("mailto:")) {
+              window.location.href = hrefValue;
+            } else {
+              window.open(hrefValue, "_blank", "noopener,noreferrer");
+            }
+          });
+
+          if (!prefersReduced) {
+            requestAnimationFrame(() => setConfetti(true));
+          }
+
+          event.preventDefault();
+        }}
         // Gradient background
         style={{
           background:
@@ -141,7 +162,6 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
                   : {
                       rotate: 0,
                       scaleX: 1,
-                      // periodic blink
                       scaleY: [1, 0.45, 1],
                       transition: {
                         duration: 0.14,
