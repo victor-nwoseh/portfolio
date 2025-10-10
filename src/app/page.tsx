@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <main>
       <Section id="hero">
-      <Container>
+      <Container className="mb-10 md:mb-14">
         <Hero
           name="Victor Nwoseh"
           role="Software Engineer"
@@ -26,32 +26,32 @@ export default function Home() {
       </Section>
       <Section id="about">
       <SectionTitle title="About" />
-      <Container>
+      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
         <About />
       </Container>
       </Section>
       <Section id="what-i-do">
       <SectionTitle title="What I do" />
-      <Container>
-        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
+        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="skills">
       <SectionTitle title="Skills" />
-      <Container>
-        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
+        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="projects">
       <SectionTitle title="Projects" />
-      <Container>
-        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
+        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       <Section id="contact">
       <SectionTitle title="Contact" />
-      <Container>
-        <p className="mt-3 text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
+        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
       </Container>
       </Section>
       </main>

@@ -7,7 +7,7 @@ interface SectionProps {
 }
 
 export default function Section({ id, className, children }: SectionProps) {
-  const classes = `scroll-mt-[88px] py-[clamp(72px,10vw,120px)] min-h-[420px]${className ? ` ${className}` : ""}`;
+  const classes = `scroll-mt-[88px] pt-12 pb-[clamp(36px,5vw,60px)] min-h-[420px]${className ? ` ${className}` : ""}`;
   return (
     <section id={id} className={classes}>
       {children}

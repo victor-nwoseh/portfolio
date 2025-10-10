@@ -96,7 +96,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
   let consumedCharacters = 0;
 
   return (
-    <motion.div {...reveal} className="-mt-12 sm:-mt-16">
+    <motion.div {...reveal} className="pt-1 sm:pt-2">
       <div className="p-0">
       <h1 className="text-[clamp(2.3rem,7vw,3.2rem)] md:text-[3.25rem] font-bold text-primary leading-tight">
         {name}
