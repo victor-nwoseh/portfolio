@@ -11,34 +11,24 @@ export const siteContent: SiteContent = {
   whatIDo: {
     items: [
       {
-        title: "End-to-end Product Builds",
+        title: "AI-Assisted Development",
         description:
-          "I prototype, architect, and launch full-stack web apps that balance polish with performance.",
-        bullets: [
-          "Rapidly iterate on UI flows while keeping data models tidy",
-          "Ship accessible, responsive frontends powered by modern tooling",
-          "Own the deploy pipeline so features stay stable in production",
-        ],
+          "I use AI as a practical development tool for writing cleaner code, finding bugs faster, and exploring new solutions. It helps me move quicker without sacrificing quality, and it’s become a key part of how I build and problem-solve.",
       },
       {
-        title: "Engineer Who Designs",
+        title: "User Experience Design",
         description:
-          "From spacing tokens to microinteractions, I obsess over how interfaces feel as much as how they work.",
-        bullets: [
-          "Translate Figma explorations into pixel-perfect React components",
-          "Sweat the fit-and-finish details that signal product maturity",
-          "Use animation judiciously to guide and delight without overwhelming",
-        ],
+          "I focus on making products simple and easy to use. My goal is to remove friction by turning complicated flows into clear, intuitive experiences that help users get things done without thinking too hard.",
       },
       {
-        title: "AI-Accelerated Workflow",
+        title: "Product Development",
         description:
-          "I lean on AI tooling as a multiplier—catching issues sooner and exploring ideas faster.",
-        bullets: [
-          "Pair with AI for boilerplate, documentation, and refactor suggestions",
-          "Keep humans-in-the-loop for architectural decisions and review",
-          "Treat automation as a teammate that helps me deliver higher-quality code",
-        ],
+          "I like building things from the ground up, from small tools to full-stack apps. I care about clean, maintainable code and creating products that actually solve problems and feel good to use.",
+      },
+      {
+        title: "Responsive Interfaces",
+        description:
+          "I make sure interfaces look and work great on any screen size. I pay attention to layout, accessibility, and consistency so that users get a smooth experience whether they’re on desktop or mobile.",
       },
     ],
   },

@@ -8,28 +8,24 @@ export default function WhatIDo() {
   const items = siteContent.whatIDo.items;
 
   return (
-    <div className="grid gap-6 md:grid-cols-2">
+    <div className="space-y-6">
       {items.map((item, index) => (
-        <motion.article
+        <motion.section
           key={item.title}
-          className="rounded-lg border border-border/60 bg-surface/80 p-6 shadow-sm"
+          className="space-y-2"
           {...reveal}
           transition={{
             ...reveal.transition,
             delay: prefersReducedMotion ? 0 : index * 0.15,
           }}
         >
-          <h3 className="text-h4 text-primary font-semibold">{item.title}</h3>
-          <p className="mt-2 text-bodyMd text-secondary">{item.description}</p>
-          <ul className="mt-4 space-y-2 text-bodySm text-secondary">
-            {item.bullets.map((bullet, bulletIndex) => (
-              <li key={bulletIndex} className="flex gap-2">
-                <span className="mt-[0.35em] h-1.5 w-1.5 flex-none rounded-full bg-accent" aria-hidden />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.article>
+          <h3 className="text-[clamp(1.1rem,4.2vw,1.55rem)] md:text-[1.6rem] font-semibold text-primary">
+            {item.title}
+          </h3>
+          <p className="text-bodyMd md:text-bodyLg text-secondary">
+            {item.description}
+          </p>
+        </motion.section>
       ))}
     </div>
   );
