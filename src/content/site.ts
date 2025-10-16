@@ -8,5 +8,39 @@ export const siteContent: SiteContent = {
       "When I’m not shipping something new or tackling another coding challenge, you’ll usually find me unwinding at the gym, hunting for fresh playlists, watching sports, or smashing my PS5 controller in the heat of EAFC Ultimate Team Sweat Fests (and somehow, I still buy the game every year). I also enjoy playing basketball and have a soft spot for TV dramas and reality series that lean dark and psychologically twisty—anything with moral tension and characters you can’t quite pin down."
     ],
   },
+  whatIDo: {
+    items: [
+      {
+        title: "End-to-end Product Builds",
+        description:
+          "I prototype, architect, and launch full-stack web apps that balance polish with performance.",
+        bullets: [
+          "Rapidly iterate on UI flows while keeping data models tidy",
+          "Ship accessible, responsive frontends powered by modern tooling",
+          "Own the deploy pipeline so features stay stable in production",
+        ],
+      },
+      {
+        title: "Engineer Who Designs",
+        description:
+          "From spacing tokens to microinteractions, I obsess over how interfaces feel as much as how they work.",
+        bullets: [
+          "Translate Figma explorations into pixel-perfect React components",
+          "Sweat the fit-and-finish details that signal product maturity",
+          "Use animation judiciously to guide and delight without overwhelming",
+        ],
+      },
+      {
+        title: "AI-Accelerated Workflow",
+        description:
+          "I lean on AI tooling as a multiplier—catching issues sooner and exploring ideas faster.",
+        bullets: [
+          "Pair with AI for boilerplate, documentation, and refactor suggestions",
+          "Keep humans-in-the-loop for architectural decisions and review",
+          "Treat automation as a teammate that helps me deliver higher-quality code",
+        ],
+      },
+    ],
+  },
 };
 

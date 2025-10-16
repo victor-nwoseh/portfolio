@@ -5,6 +5,7 @@ import Section from "@/components/layout/Section";
 import Hero from "@/components/sections/Hero";
 import SectionTitle from "@/components/layout/SectionTitle";
 import About from "@/components/sections/About";
+import WhatIDo from "@/components/sections/WhatIDo";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
       <Section id="what-i-do">
       <SectionTitle title="What I do" />
       <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
-        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+        <WhatIDo />
       </Container>
       </Section>
       <Section id="skills">
