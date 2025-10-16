@@ -5,6 +5,8 @@ export interface AboutContent {
 export interface WhatIDoItem {
   title: string;
   description: string;
+  tagline?: string;
+  visual?: string;
   ctaLabel?: string;
   ctaHref?: string;
 }

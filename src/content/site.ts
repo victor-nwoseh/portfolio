@@ -14,21 +14,29 @@ export const siteContent: SiteContent = {
         title: "AI-Assisted Development",
         description:
           "I use AI as a practical development tool for writing cleaner code, finding bugs faster, and exploring new solutions. It helps me move quicker without sacrificing quality, and it’s become a key part of how I build and problem-solve.",
+        tagline: "My 24/7 pair programmer.",
+        visual: "ai",
       },
       {
         title: "User Experience Design",
         description:
           "I focus on making products simple and easy to use. My goal is to remove friction by turning complicated flows into clear, intuitive experiences that help users get things done without thinking too hard.",
+        tagline: "Simple. Intuitive. Effortless.",
+        visual: "ux",
       },
       {
         title: "Product Development",
         description:
           "I like building things from the ground up, from small tools to full-stack apps. I care about clean, maintainable code and creating products that actually solve problems and feel good to use.",
+        tagline: "From idea to impact.",
+        visual: "product",
       },
       {
         title: "Responsive Interfaces",
         description:
           "I make sure interfaces look and work great on any screen size. I pay attention to layout, accessibility, and consistency so that users get a smooth experience whether they’re on desktop or mobile.",
+        tagline: "Smooth experiences, every size.",
+        visual: "responsive",
       },
     ],
   },
