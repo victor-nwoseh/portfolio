@@ -3,18 +3,16 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { reveal } from "@/lib/motion/presets";
 import { siteContent } from "@/content/site";
+import AIVisual from "@/components/ui/AIVisual";
+import UXVisual from "@/components/ui/UXVisual";
+import ProductVisual from "@/components/ui/ProductVisual";
+import ResponsiveVisual from "@/components/ui/ResponsiveVisual";
 
 function VisualContent({ visual, title }: { visual?: string; title: string }) {
   if (visual === "ai") {
     return (
       <div className="relative aspect-[3/2] w-full">
-        <Image
-          src="/images/what-i-do/ai-assisted-development.jpg"
-          alt={`${title} illustration`}
-          fill
-          className="object-cover"
-          sizes="(min-width: 768px) 50vw, 90vw"
-        />
+        <AIVisual />
       </div>
     );
   }
@@ -22,13 +20,7 @@ function VisualContent({ visual, title }: { visual?: string; title: string }) {
   if (visual === "ux") {
     return (
       <div className="relative aspect-[3/2] w-full">
-        <Image
-          src="/images/what-i-do/user-experience-design.jpg"
-          alt={`${title} illustration`}
-          fill
-          className="object-cover"
-          sizes="(min-width: 768px) 50vw, 90vw"
-        />
+        <UXVisual />
       </div>
     );
   }
@@ -36,13 +28,15 @@ function VisualContent({ visual, title }: { visual?: string; title: string }) {
   if (visual === "product") {
     return (
       <div className="relative aspect-[3/2] w-full">
-        <Image
-          src="/images/what-i-do/product-development.jpg"
-          alt={`${title} illustration`}
-          fill
-          className="object-cover"
-          sizes="(min-width: 768px) 50vw, 90vw"
-        />
+        <ProductVisual />
+      </div>
+    );
+  }
+
+  if (visual === "responsive") {
+    return (
+      <div className="relative aspect-[3/2] w-full">
+        <ResponsiveVisual />
       </div>
     );
   }
