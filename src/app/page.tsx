@@ -6,8 +6,7 @@ import Hero from "@/components/sections/Hero";
 import SectionTitle from "@/components/layout/SectionTitle";
 import About from "@/components/sections/About";
 import WhatIDo from "@/components/sections/WhatIDo";
-import SkillCard from "@/components/ui/SkillCard";
-import { siteContent } from "@/content/site";
+import Skills from "@/components/sections/Skills";
 
 export default function Home() {
   return (
@@ -42,10 +41,7 @@ export default function Home() {
       <Section id="skills">
       <SectionTitle title="Skills" />
       <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
-        {/* Temporary test instance */}
-        <div className="max-w-xs">
-          <SkillCard skill={siteContent.skills.development[0]} />
-        </div>
+        <Skills />
       </Container>
       </Section>
       <Section id="projects">

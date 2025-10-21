@@ -15,21 +15,8 @@ export interface WhatIDoContent {
   items: WhatIDoItem[];
 }
 
-export interface Skill {
-  name: string;
-  logo: string;
-  color: string;
-}
-
-export interface SkillsContent {
-  development: Skill[];
-  tools: Skill[];
-  knowledge: Skill[];
-}
-
 export interface SiteContent {
   about: AboutContent;
   whatIDo: WhatIDoContent;
-  skills: SkillsContent;
 }
 
