@@ -108,7 +108,7 @@ export default function Projects() {
                   src={project.image}
                   alt={`${project.title} screenshot`}
                   fill
-                  className="object-cover"
+                  className={project.id === 2 ? "object-contain" : "object-cover"}
                   sizes="(max-width: 768px) 100vw, 300px"
                 />
               </div>
