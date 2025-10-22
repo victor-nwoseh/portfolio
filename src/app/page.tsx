@@ -7,6 +7,7 @@ import SectionTitle from "@/components/layout/SectionTitle";
 import About from "@/components/sections/About";
 import WhatIDo from "@/components/sections/WhatIDo";
 import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -47,7 +48,7 @@ export default function Home() {
       <Section id="projects">
       <SectionTitle title="Projects" />
       <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
-        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
+        <Projects />
       </Container>
       </Section>
       <Section id="contact">
