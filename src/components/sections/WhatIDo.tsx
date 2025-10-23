@@ -1,110 +1,51 @@
 "use client";
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { reveal } from "@/lib/motion/presets";
 import { siteContent } from "@/content/site";
-import AIVisual from "@/components/ui/AIVisual";
-import UXVisual from "@/components/ui/UXVisual";
-import ProductVisual from "@/components/ui/ProductVisual";
-import ResponsiveVisual from "@/components/ui/ResponsiveVisual";
-
-function VisualContent({ visual, title }: { visual?: string; title: string }) {
-  if (visual === "ai") {
-    return (
-      <div className="relative aspect-[3/2] w-full">
-        <AIVisual />
-      </div>
-    );
-  }
-
-  if (visual === "ux") {
-    return (
-      <div className="relative aspect-[3/2] w-full">
-        <UXVisual />
-      </div>
-    );
-  }
-
-  if (visual === "product") {
-    return (
-      <div className="relative aspect-[3/2] w-full">
-        <ProductVisual />
-      </div>
-    );
-  }
-
-  if (visual === "responsive") {
-    return (
-      <div className="relative aspect-[3/2] w-full">
-        <ResponsiveVisual />
-      </div>
-    );
-  }
-
-  return (
-    <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-gradient-to-br from-accent/10 via-transparent to-accent/10">
-      <div className="absolute inset-0 flex items-center justify-center text-bodySm uppercase tracking-wide text-accent/70">
-        {visual ?? "visual"}
-      </div>
-    </div>
-  );
-}
 
 export default function WhatIDo() {
-  const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion() ?? false;
   const items = siteContent.whatIDo.items;
 
   return (
-    <div className="flex flex-col gap-12">
-      {items.map((item, index) => {
-        const isEven = index % 2 === 0;
-
-        const text = (
-          <motion.div
-            key={`${item.title}-text`}
-            className="flex flex-col justify-center space-y-3"
-            {...reveal}
-            transition={{
-              ...reveal.transition,
-              delay: prefersReducedMotion ? 0 : index * 0.1,
-            }}
-          >
-            <h3 className="inline-block bg-gradient-to-r from-accent via-focus to-accent bg-clip-text text-transparent text-[clamp(1.1rem,4.2vw,1.55rem)] md:text-[1.6rem] font-semibold">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      {items.map((item, index) => (
+        <motion.article
+          key={item.title}
+          className="group relative overflow-hidden rounded-lg border border-white/10 bg-gradient-to-br from-slate-800/40 via-slate-900/40 to-slate-800/40 p-6 md:p-8 transition-all duration-300 hover:border-accent/30 hover:shadow-[0_8px_30px_rgba(45,212,191,0.12)]"
+          {...reveal}
+          transition={{
+            ...reveal.transition,
+            delay: prefersReducedMotion ? 0 : index * 0.1,
+          }}
+        >
+          {/* Subtle gradient accent */}
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          
+          {/* Content */}
+          <div className="relative z-10 space-y-3">
+            {/* Title */}
+            <h3 className="text-lg md:text-xl font-semibold bg-gradient-to-r from-accent via-focus to-accent bg-clip-text text-transparent">
               {item.title}
             </h3>
-            <p className="text-bodyMd md:text-bodyLg text-secondary">{item.description}</p>
+            
+            {/* Description */}
+            <p className="text-sm md:text-base text-secondary leading-relaxed">
+              {item.description}
+            </p>
+            
+            {/* Tagline */}
             {item.tagline && (
-              <p className="text-bodySm font-medium text-accent/90">{item.tagline}</p>
+              <p className="text-xs md:text-sm font-medium text-accent/80 italic pt-2">
+                {item.tagline}
+              </p>
             )}
-          </motion.div>
-        );
-
-        const visual = (
-          <motion.div
-            key={`${item.title}-visual`}
-            className="relative overflow-hidden rounded-lg ring-1 ring-border/60 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(45,212,191,0.18)]"
-            {...reveal}
-            transition={{
-              ...reveal.transition,
-              delay: prefersReducedMotion ? 0 : index * 0.1 + 0.1,
-            }}
-          >
-            <VisualContent visual={item.visual} title={item.title} />
-          </motion.div>
-        );
-
-        return (
-          <div
-            key={item.title}
-            className={`grid gap-6 md:grid-cols-2 ${
-              isEven ? "" : "md:[&>*:first-child]:order-2"
-            }`}
-          >
-            {text}
-            {visual}
           </div>
-        );
-      })}
+
+          {/* Corner accent */}
+          <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        </motion.article>
+      ))}
     </div>
   );
 }

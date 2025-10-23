@@ -34,7 +34,7 @@ export default function Home() {
       </Container>
       </Section>
       <Section id="what-i-do">
-      <SectionTitle title="What I do" />
+      <SectionTitle title="Areas of focus" />
       <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
         <WhatIDo />
       </Container>
@@ -51,14 +51,12 @@ export default function Home() {
         <Projects />
       </Container>
       </Section>
-      <Section id="contact">
-      <SectionTitle title="Contact" />
-      <Container className="mt-6 md:mt-8 mb-10 md:mb-14">
-        <p className="text-bodyMd md:text-bodyLg text-secondary">Coming soon.</p>
-      </Container>
-      </Section>
       </main>
-      <footer></footer>
+      <footer>
+        <Container className="py-8 md:py-10">
+          <p className="text-center text-bodyMd md:text-bodyLg text-secondary">Coming soon...</p>
+        </Container>
+      </footer>
     </div>
   );
 }

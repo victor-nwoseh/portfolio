@@ -98,10 +98,10 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
   return (
     <motion.div {...reveal} className="pt-1 sm:pt-2">
       <div className="p-0">
-      <h1 className="text-[clamp(2.3rem,7vw,3.2rem)] md:text-[3.25rem] font-bold text-primary leading-tight">
+      <h1 className="text-[clamp(2.3rem,7vw,3.2rem)] md:text-[3.25rem] font-semibold text-primary leading-tight">
         {name}
       </h1>
-      <p className="mt-2 text-[clamp(1.1rem,4.2vw,1.55rem)] md:text-[1.6rem] text-secondary">
+      <p className="mt-2 text-[clamp(1.1rem,4.2vw,1.55rem)] md:text-[1.6rem] font-semibold text-secondary leading-tight">
         {role}
       </p>
       <div className="mt-4 text-[clamp(0.95rem,4vw,1.05rem)] md:text-bodyLg text-primary max-w-prose">
