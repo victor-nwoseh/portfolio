@@ -95,10 +95,10 @@ export default function Projects() {
         >
           {/* Left side - Project Image */}
           <div className="relative group hidden md:block md:w-[245px]">
-            <div 
+            <div
               className="relative rounded-lg overflow-hidden border border-white/20 w-full md:h-[145px]"
               style={{
-                backgroundColor: 'white',
+                backgroundColor: '#1e293b',
                 boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
               }}
             >
