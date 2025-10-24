@@ -26,35 +26,35 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
 
   const snippetTokens = useMemo<SnippetToken[]>(
     () => [
-      { text: "const", className: "text-[#38bdf8]" },
+      { text: "const", className: "text-[#ff6b9d]" }, // Hot pink
       { text: " " },
-      { text: "dev", className: "text-[#c4b5fd]" },
+      { text: "dev", className: "text-[#ffd93d]" }, // Bright yellow
       { text: " " },
-      { text: "=", className: "text-secondary" },
+      { text: "=", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
-      { text: "{", className: "text-primary" },
+      { text: "{", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "role", className: "text-[#fbbf24]" },
-      { text: ":", className: "text-secondary" },
+      { text: "role", className: "text-[#6bcf7f]" }, // Mint green
+      { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
-      { text: "'Full-Stack Developer'", className: "text-[#f472b6]" },
-      { text: ",", className: "text-primary" },
+      { text: "'Full-Stack Developer'", className: "text-[#4facfe]" }, // Sky blue
+      { text: ",", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "passion", className: "text-[#fbbf24]" },
-      { text: ":", className: "text-secondary" },
+      { text: "passion", className: "text-[#6bcf7f]" }, // Mint green
+      { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
-      { text: "'AI Enthusiast'", className: "text-[#f472b6]" },
-      { text: ",", className: "text-primary" },
+      { text: "'AI Enthusiast'", className: "text-[#4facfe]" }, // Sky blue
+      { text: ",", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "status", className: "text-[#fbbf24]" },
-      { text: ":", className: "text-secondary" },
+      { text: "status", className: "text-[#6bcf7f]" }, // Mint green
+      { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
-      { text: "'Probably over-engineering something right now'", className: "text-[#f472b6]" },
+      { text: "'Probably over-engineering something right now'", className: "text-[#4facfe]" }, // Sky blue
       { text: "\n" },
-      { text: "};", className: "text-primary" },
+      { text: "};", className: "text-[#f0f0f0]" }, // Off-white
     ],
     []
   );
@@ -105,7 +105,7 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
         {role}
       </p>
       <div className="mt-4 text-[clamp(0.95rem,4vw,1.05rem)] md:text-bodyLg text-primary max-w-prose">
-        <pre className="relative overflow-hidden rounded-lg bg-[rgba(15,23,42,0.65)] border border-border/40 p-4 font-mono text-[0.95em] leading-relaxed shadow-sm whitespace-pre-wrap">
+        <pre className="relative overflow-hidden rounded-lg bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#020617] p-4 font-mono text-[0.95em] leading-relaxed whitespace-pre-wrap" style={{ boxShadow: '8px 8px 0px rgba(255, 107, 157, 0.3)' }}>
           {!prefersReducedMotion && (
             <motion.div
               initial={{ width: "100%" }}

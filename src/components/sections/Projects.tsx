@@ -91,36 +91,9 @@ export default function Projects() {
             delay: prefersReducedMotion ? 0 : 0.3 + index * 0.1,
             duration: 0.5
           }}
-          className="flex flex-col-reverse md:flex-row gap-8 items-start"
+          className="group/project flex flex-col-reverse md:flex-row gap-8 items-start rounded-xl p-6 -mx-6 border border-transparent transition-all duration-300 hover:backdrop-blur-xl hover:bg-white/5 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1)] hover:border-white/10"
         >
-          {/* Left side - Project Image */}
-          <div className="relative group hidden md:block md:w-[245px]">
-            <div
-              className="relative rounded-lg overflow-hidden border border-white/20 w-full md:h-[145px]"
-              style={{
-                backgroundColor: '#1e293b',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
-              }}
-            >
-              {/* Project image */}
-              <div className="relative aspect-video md:aspect-auto md:h-full">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} screenshot`}
-                  fill
-                  className={project.id === 2 ? "object-contain" : "object-cover"}
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-              
-              {/* Hover overlay */}
-              <div 
-                className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
-          </div>
-
-          {/* Right side - Project Details */}
+          {/* Project Details */}
           <div className="flex-1 space-y-4">
             {/* Title with links */}
             <div className="flex items-start gap-3">
