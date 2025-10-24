@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { reveal } from "@/lib/motion/presets";
 import { siteContent } from "@/content/site";
@@ -11,7 +12,7 @@ const HIGHLIGHTS = [
 ];
 
 function applyHighlights(text: string) {
-  let segments: (string | JSX.Element)[] = [text];
+  let segments: (string | React.ReactElement)[] = [text];
 
   HIGHLIGHTS.forEach((phrase) => {
     segments = segments.flatMap((segment) => {
@@ -20,7 +21,7 @@ function applyHighlights(text: string) {
       }
 
       const parts = segment.split(phrase);
-      const result: (string | JSX.Element)[] = [];
+      const result: (string | React.ReactElement)[] = [];
 
       parts.forEach((part, index) => {
         if (part) result.push(part);
