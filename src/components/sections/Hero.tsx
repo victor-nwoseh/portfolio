@@ -35,21 +35,21 @@ export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroPr
       { text: "{", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "role", className: "text-[#6bcf7f]" }, // Mint green
+      { text: "type", className: "text-[#6bcf7f]" }, // Mint green
       { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
       { text: "'Full-Stack Developer'", className: "text-[#4facfe]" }, // Sky blue
       { text: ",", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "passion", className: "text-[#6bcf7f]" }, // Mint green
+      { text: "interest", className: "text-[#6bcf7f]" }, // Mint green
       { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
       { text: "'AI Enthusiast'", className: "text-[#4facfe]" }, // Sky blue
       { text: ",", className: "text-[#f0f0f0]" }, // Off-white
       { text: "\n" },
       { text: "  " },
-      { text: "status", className: "text-[#6bcf7f]" }, // Mint green
+      { text: "state", className: "text-[#6bcf7f]" }, // Mint green
       { text: ":", className: "text-[#c0c0c0]" }, // Silver
       { text: " " },
       { text: "'Probably over-engineering something right now'", className: "text-[#4facfe]" }, // Sky blue
