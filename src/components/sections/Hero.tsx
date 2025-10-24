@@ -1,7 +1,6 @@
 "use client";
 import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
-import Button from "@/components/ui/Button";
 import FancyCTA from "@/components/ui/FancyCTA";
 import { reveal } from "@/lib/motion/presets";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
@@ -14,14 +13,13 @@ interface SocialLink {
 interface HeroProps {
   name: string;
   role: string;
-  valueProp: string;
   ctaHref: string; // mailto
   socials: SocialLink[]; // e.g., GitHub, LinkedIn
 }
 
 type SnippetToken = { text: string; className?: string };
 
-export default function Hero({ name, role, valueProp, ctaHref, socials }: HeroProps) {
+export default function Hero({ name, role, ctaHref, socials }: HeroProps) {
   const prefersReducedMotion = useReducedMotion();
 
   const snippetTokens = useMemo<SnippetToken[]>(

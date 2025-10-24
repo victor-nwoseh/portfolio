@@ -4,6 +4,7 @@ type Options = { threshold?: number };
 
 export function useScrollSpy(sectionIds: string[], options?: Options): string | null {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const sectionIdsKey = sectionIds.join("|");
 
   useEffect(() => {
     if (sectionIds.length === 0) return;
@@ -41,7 +42,8 @@ export function useScrollSpy(sectionIds: string[], options?: Options): string | 
     return () => {
       observer.disconnect();
     };
-  }, [sectionIds.join("|"), options?.threshold]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sectionIdsKey, options?.threshold]);
 
   return activeId;
 }

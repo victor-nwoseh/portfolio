@@ -40,7 +40,9 @@ const FancyCTA = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(
 
     return (
       <Base
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         ref={ref as any}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         href={href as any}
         type={!href ? "button" : undefined}
         className={`relative inline-flex select-none items-center justify-center rounded-full px-5 h-10 text-sm sm:px-6 sm:h-11 sm:text-base text-white focus:outline-none focus:ring-2 focus:ring-focus cursor-pointer ${

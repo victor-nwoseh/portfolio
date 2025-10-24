@@ -16,7 +16,7 @@ export default function ConfettiBurst({ durationMs = 2000, onDone }: ConfettiBur
     if (!ctx) return;
 
     let raf = 0;
-    let start = performance.now();
+    const start = performance.now();
 
     const dpr = Math.max(1, window.devicePixelRatio || 1);
     const resize = () => {

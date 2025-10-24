@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Container from "@/components/layout/Container";
 import Section from "@/components/layout/Section";
 import Hero from "@/components/sections/Hero";
@@ -20,7 +19,6 @@ export default function Home() {
         <Hero
           name="Victor Nwoseh"
           role="Software Engineer"
-          valueProp=""
           ctaHref="mailto:victor.nwoseh05@gmail.com?subject=So%E2%80%A6%20when%20can%20you%20start%3F"
           socials={[
             { label: "GitHub", href: "https://github.com/victor-nwoseh" },

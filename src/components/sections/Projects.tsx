@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { reveal } from "@/lib/motion/presets";
-import Image from "next/image";
 
 // Project data
 const projects = [
