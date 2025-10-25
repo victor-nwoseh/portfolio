@@ -17,7 +17,7 @@ const projects = [
   {
     id: 2,
     title: "Enterprise Investment Management Platform – Wells Fargo",
-    description: "An enterprise system for financial advisors to manage client portfolios, track investments, and perform secure calculations for thousands of accounts.",
+    description: "An enterprise system for financial advisors to manage client portfolios, track investments, and perform secure calculations.",
     technologies: ["Java", "JPA", "Spring Boot", "REST API"],
     image: "/images/projects/wells-fargo-investment.png",
     liveUrl: null,

@@ -3,9 +3,10 @@ import type { SiteContent } from "./types";
 export const siteContent: SiteContent = {
   about: {
     paragraphs: [
-      "Fresh out of University with a First-Class degree in Software Engineering, I’m now laser-focused on converting that momentum into my first professional role. My days are split between hands-on personal projects that demonstrate real-world readiness, LeetCode reps to sharpen my algorithmic edge, and realistic job simulations that bridge the gap where commercial experience would normally sit.",
-      "I specialise in full-stack development—bringing polished, user-friendly web applications to life end-to-end. I care as much about how an interface feels as how it performs under load, and I’m a big believer in using AI tooling thoughtfully to accelerate delivery without sacrificing code quality. I’m actively looking for a team where I can contribute to production work, keep leveling up, and bring those habits of continuous learning to a real product.",
-      "When I’m not shipping something new or tackling another coding challenge, you’ll usually find me unwinding at the gym, hunting for fresh playlists, watching sports, or smashing my PS5 controller in the heat of EAFC Ultimate Team Sweat Fests (and somehow, I still buy the game every year). I also enjoy playing basketball and have a soft spot for reality series and TV dramas that lean dark and psychologically twisty—anything with moral tension and characters you can’t quite pin down."
+      "I'm a developer with a passion for creating applications that strike the right balance between elegant design and robust engineering. I care as much about how an interface looks as how it performs, and I'm a strong believer in leveraging AI tools to accelerate development without compromising quality.",
+      "I recently graduated with First-Class Honours in Software Engineering and am now focused on securing my first full-time professional role. My days are split between building personal projects and completing online job simulations.",
+      "Beyond software, I've taken on part-time roles in other industries, where I sharpened collaboration, quick thinking, adaptability, and problem-solving skills.",
+      "In my free time, I hit the gym, listen to music, play video games, or engage in sports. I also enjoy reality series and TV dramas that lean dark and psychologically twisty."
     ],
   },
   whatIDo: {
@@ -28,7 +29,7 @@ export const siteContent: SiteContent = {
       {
         title: "Machine Learning Exploration",
         description:
-          "I explore and apply machine learning techniques that allow systems to detect patterns, make predictions, and adapt over time.",
+          "I enjoy learning and working on machine learning and deep learning to better understand how AI systems work under the hood. I find the field quite fascinating and like experimenting with it to expand my knowledge.",
       },
     ],
   },

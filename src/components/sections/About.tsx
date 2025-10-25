@@ -7,8 +7,7 @@ import { siteContent } from "@/content/site";
 const PARAGRAPH_DELAY = 0.2;
 
 const HIGHLIGHTS = [
-  "First-Class degree in Software Engineering",
-  "full-stack development",
+  "First-Class Honours in Software Engineering",
 ];
 
 function applyHighlights(text: string) {

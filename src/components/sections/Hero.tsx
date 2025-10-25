@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import FancyCTA from "@/components/ui/FancyCTA";
 import { reveal } from "@/lib/motion/presets";
-import { GitHubIcon, LinkedInIcon } from "@/components/ui/Icons";
+import { GitHubIcon, LinkedInIcon, CVIcon } from "@/components/ui/Icons";
 
 interface SocialLink {
   label: string;
@@ -151,11 +151,14 @@ export default function Hero({ name, role, ctaHref, socials }: HeroProps) {
       <div className="mt-6 flex flex-wrap items-center gap-4">
         <FancyCTA href={ctaHref} bounce={isComplete} showEmoji={isComplete}>Hire me</FancyCTA>
         <div className="flex items-center gap-5">
-          <a href={socials.find(s=>s.label.toLowerCase()==="github")?.href || "#"} className="text-accent hover:text-accent-hover" aria-label="GitHub">
-            <GitHubIcon className="w-6 h-6" />
+          <a href={socials.find(s=>s.label.toLowerCase()==="github")?.href || "#"} className="text-accent hover:text-accent-hover flex items-center justify-center" aria-label="GitHub">
+            <GitHubIcon className="w-6 h-6 flex-shrink-0" />
           </a>
-          <a href={socials.find(s=>s.label.toLowerCase()==="linkedin")?.href || "#"} className="text-accent hover:text-accent-hover" aria-label="LinkedIn">
-            <LinkedInIcon className="w-6 h-6" />
+          <a href={socials.find(s=>s.label.toLowerCase()==="linkedin")?.href || "#"} className="text-accent hover:text-accent-hover flex items-center justify-center" aria-label="LinkedIn">
+            <LinkedInIcon className="w-6 h-6 flex-shrink-0" />
+          </a>
+          <a href="https://drive.google.com/file/d/1YlOo3y9pjRzQRd5XEZG4T7-BI-63VSQu/view?pli=1" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-accent-hover flex items-center justify-center" aria-label="Resume/CV">
+            <CVIcon className="w-6 h-6 flex-shrink-0" />
           </a>
         </div>
       </div>
