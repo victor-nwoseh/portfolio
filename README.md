@@ -2,7 +2,7 @@
 
 A modern, interactive personal portfolio website showcasing my work as a Software Engineer. Built with Next.js, React, TypeScript, and Tailwind CSS.
 
-🔗 **Live Site**: [victor-nwoseh.vercel.app]
+🔗 **Live Site**: [https://victor-nwoseh.vercel.app/]
 
 ## ✨ Features
 
